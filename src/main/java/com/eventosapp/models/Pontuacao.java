@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 
@@ -22,7 +24,7 @@ public class Pontuacao implements Serializable{
 	@NotEmpty
 	private String jogo;
 	
-	@NotEmpty
+	@NotNull
 	private int placar;
 
 	@NotEmpty
