@@ -37,11 +37,9 @@
 		</thead>
 		<tbody>
 			<tr th:each="pontuacao : ${pontuacoes}">
-				<td><a th:href="${(#mvc.url('EC#detalhesEvento').arg(0, pontuacao.codigo)).build()}"><span th:text="${pontuacao.nome}"></span></a></td>
-				<td><span th:text="${pontuacao.jogo}"></span></td>
+				<td><a th:text="${pontuacao.codigo}"></a></td>
 				<td><span th:text="${pontuacao.placar}"></span></td>
-				
-				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarEvento').arg(0, evento.codigo)).build()}"><i class="material-icons left">delete</i></a></td>
+				 
 			</tr>
 		</tbody>
 	

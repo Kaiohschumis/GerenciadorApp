@@ -1,21 +1,4 @@
-.detalhesEvento{
-	box-shadow: 0px 0px 5px grey;
-	padding-top: 20px;
-	padding-left: 20px;
-	margin-bottom: 60px;
-}
 
-.formConvidado{
-	box-shadow: 0px 0px 5px grey;
-	padding-top: 20px;
-	padding-left: 20px;
-	padding-bottom: 10px;
-	margin-bottom: 60px;
-}
-
-.tabelaConvidado{
-	width: 50%;
-}
 
 .formEvento{
 	box-shadow: 0px 0px 5px grey;
@@ -26,5 +9,25 @@
 }
 
 .menu{
-	background-color: rgb(255, 128, 0);
+	background-color: rgb(0,0,0);
+	
+}
+
+.menuI{
+	background-color: rgb(0,0,0);
+	margin-top: -45px;
+}
+
+.page{
+	background-image: url('KaioChumiss.png');
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    right: 0;
+    
+    
 }
