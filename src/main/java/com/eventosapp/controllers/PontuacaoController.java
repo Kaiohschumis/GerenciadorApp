@@ -31,7 +31,10 @@ public class PontuacaoController {
 		if(result.hasErrors()){
 			attributes.addFlashAttribute("mensagem", "Verifique os campos!");
 			return "redirect:/registrarPontuacao";
+			
+				
 		}
+		
 		
 		pr.save(pontuacao);
 		attributes.addFlashAttribute("mensagem", "Pontuação registrada!");
@@ -53,6 +56,12 @@ public class PontuacaoController {
 		pr.delete(pontuacao);
 		return "redirect:/pontuacoes";
 	}
+	
+	
+	// endpoint spring maximo das pontuações
+	//buscar na base select max
+	//retornara a pontuação maior
+	
 		
 	
 	}

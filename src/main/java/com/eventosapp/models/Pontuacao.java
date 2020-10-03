@@ -9,8 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 
 @Entity
 public class Pontuacao implements Serializable{
@@ -21,15 +19,16 @@ public class Pontuacao implements Serializable{
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private long codigo;
 	
-	@NotEmpty
+	
 	private String jogo;
 	
 	@NotNull
 	private int placar;
 
-	@NotEmpty
 	private String observacao;
-
+	
+	private int recordeMin;
+	
 	public long getCodigo() {
 		return codigo;
 	}
@@ -60,6 +59,14 @@ public class Pontuacao implements Serializable{
 
 	public void setPlacar(int placar) {
 		this.placar = placar;
+	}
+
+	public int getRecordeMin() {
+		return recordeMin;
+	}
+
+	public void setRecordeMin(int recorde) {
+		this.recordeMin = recorde;
 	}
 
 }
