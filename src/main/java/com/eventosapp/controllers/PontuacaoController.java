@@ -4,7 +4,10 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -40,6 +43,15 @@ public class PontuacaoController {
 		attributes.addFlashAttribute("mensagem", "Pontuação registrada!");
 		return "redirect:/pontuacoes";
 	}
+	// @GetMapping("/pontuacoes")
+    // public Pontuacao placarMax(@PathVariable("placar") int placar) {
+	//	 Pontuacao pontuacoesmax = pr.max(placar);
+     //      return placarMax(placar);
+    // }
+	 
+	  
+	 
+	 
 	
 	//Caminho das pontuações onde todas estão listadas
 	@RequestMapping("/pontuacoes")
@@ -48,14 +60,9 @@ public class PontuacaoController {
 		Iterable<Pontuacao> pontuacoes = pr.findAll();
 		mv.addObject("pontuacoes", pontuacoes);
 		return mv;
+		
 	}
 	
-	@RequestMapping("/deletarPontuacao")
-	public String deletarPontuacao(long codigo){
-		Pontuacao pontuacao = pr.findByCodigo(codigo);
-		pr.delete(pontuacao);
-		return "redirect:/pontuacoes";
-	}
 	
 	
 	// endpoint spring maximo das pontuações

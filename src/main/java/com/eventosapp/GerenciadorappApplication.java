@@ -6,7 +6,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 public class GerenciadorappApplication {
-
+	
+	//classe principal, teste encoder 123
 	public static void main(String[] args) {
 		SpringApplication.run(GerenciadorappApplication.class, args);
 		//System.out.print(new BCryptPasswordEncoder().encode("123"));

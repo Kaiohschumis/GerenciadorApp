@@ -15,6 +15,8 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	
+	//permitAll para todos os endpoints até que seja finalizada a parte da role
+	//para enfim determinar nível de camada de acesso
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http.csrf().disable().authorizeRequests()
@@ -26,6 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
 	}
 	
+	//Autentincação em memória onde é definido usuário, senha e o nível de acesso
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
 		auth.inMemoryAuthentication()

@@ -38,6 +38,14 @@ private static final long serialVersionUID = 1L;
 	          name = "role_id", referencedColumnName = "nomeRole")) 
     private List<Role> roles;
 
+	public Usuario(String login, String nomeCompleto, String senha) {
+		super();
+		this.login = login;
+		this.nomeCompleto = nomeCompleto;
+		this.senha = senha;
+		
+	}
+
 	public String getLogin() {
 		return login;
 	}

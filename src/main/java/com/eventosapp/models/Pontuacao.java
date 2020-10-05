@@ -19,15 +19,14 @@ public class Pontuacao implements Serializable{
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private long codigo;
 	
-	
-	private String jogo;
-	
 	@NotNull
 	private int placar;
 
 	private String observacao;
 	
+	//Verificar se utilização futura realmente é necessária
 	private int recordeMin;
+	
 	
 	public long getCodigo() {
 		return codigo;
@@ -43,14 +42,6 @@ public class Pontuacao implements Serializable{
 
 	public void setObservacao(String observacao) {
 		this.observacao = observacao;
-	}
-
-	public String getJogo() {
-		return jogo;
-	}
-
-	public void setJogo(String jogo) {
-		this.jogo = jogo;
 	}
 	
 	public int getPlacar() {
